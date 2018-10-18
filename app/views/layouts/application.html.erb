@@ -13,11 +13,14 @@
     <style>
     @import url('https://fonts.googleapis.com/css?family=Fascinate+Inline|Roboto');
     </style>
+
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+</style>
   </head>
 
   <body>
     <%= yield %>
-
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>

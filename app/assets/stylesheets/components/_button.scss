@@ -1,0 +1,30 @@
+.btn-add {
+  color:  #ffffff;
+  border: 4px solid  #ffffff;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  margin-top: 13px;
+}
+
+.btn-add a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.btn-add:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 13px 17px;
+}
+
+.btn {
+  display: flex;
+  align-item: center;
+  justify-content : space-around;
+  padding: 4px;
+}
+
+/* Build your own button classes ! */

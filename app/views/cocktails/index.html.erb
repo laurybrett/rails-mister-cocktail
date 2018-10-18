@@ -1,28 +1,34 @@
-<div class="banner">
-  <div class="banner-content">
-    <h1>Drinkos</h1>
-    <p>Learn to drink with us in Lille</p>
-    <a class="btn btn-primary btn-lg">Start now</a>
-  </div>
-</div>
 
-  <div class="container">
-    <div class="row">
-      <% @cocktails.each do |cocktail| %>
-      <div class="col-xs-12 col-sm-4">
-         <div class="card">
-            <div class="card-category"><%= ["MUST", "POPULAR", "SUMMER"].sample %></div>
-            <div class="card-description">
-              <h2>  <%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-              <p>Very cool cocktail, the best</p>
-            </div>
+    <div class="banner cover">
+      <div class="banner-content">
+        <h1>Drinkos</h1>
+        <p>Learn to drink with us in Lille</p>
+      </div>
+    </div>
 
-          </div>
-       </div>
+      <div class="container_cards">
+        <div class="row">
+          <% @cocktails.each do |cocktail| %>
+          <div class="col-xs-12 col-sm-4">
+              <%= link_to cocktail_path(cocktail) do %>
+                  <div class="card">
+                    <div class="card-category"><%= ["MUST", "POPULAR", "SUMMER"].sample %>
+                    </div>
+                    <div class="card-description">
+                      <h2><%= cocktail.name %></h2>
+                      <p>Very cool cocktail, the best</p>
+                   </div>
+                 </div>
+            <% end %>
+         </div>
+          <% end %>
+        </div>
+      </div>
+
+<div class="btn">
+    <div class="btn-add">
+      <%= link_to new_cocktail_path do %>
+        <i class="fas fa-plus"></i> Add a cocktail
       <% end %>
     </div>
-  </div>
-
-
-
-<%= link_to 'Add a cocktail', new_cocktail_path %>
+</div>

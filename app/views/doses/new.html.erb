@@ -1,4 +1,8 @@
-<h1> Create a new dose </h1>
+ <div class="banner background_show">
+    <div class="add-banner">
+        <h1>Add a dose</h1>
+    </div>
+</div>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
@@ -6,4 +10,11 @@
   <%= f.submit "Create a dose", class: "btn btn-primary" %>
 <% end %>
 
-<%= link_to 'Back to the cocktail', cocktail_path(@cocktail) %>
+
+<div class="btn">
+    <div class="btn-add">
+      <%= link_to cocktail_path(@cocktail) do %>
+        <i class="fas fa-undo"></i> Back to the Cocktail
+      <% end %>
+    </div>
+</div>

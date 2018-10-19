@@ -1,4 +1,3 @@
-
     <div class="banner cover">
       <div class="banner-content">
         <h1>Drinkos</h1>
@@ -6,26 +5,9 @@
       </div>
     </div>
 
-      <div class="container_cards">
-        <div class="row">
-          <% @cocktails.each do |cocktail| %>
-          <div class="col-xs-12 col-sm-4">
-              <%= link_to cocktail_path(cocktail) do %>
-                  <div class="card">
-                    <div class="card-category"><%= ["MUST", "POPULAR", "SUMMER"].sample %>
-                    </div>
-                    <div class="card-description">
-                      <h2><%= cocktail.name %></h2>
-                      <p>Very cool cocktail, the best</p>
-                   </div>
-                 </div>
-            <% end %>
-         </div>
-          <% end %>
-        </div>
-      </div>
+    <%= render 'partials/card', cocktail: @cocktail %>
 
-<div class="btn">
+<div class="butn">
     <div class="btn-add">
       <%= link_to new_cocktail_path do %>
         <i class="fas fa-plus"></i> Add a cocktail

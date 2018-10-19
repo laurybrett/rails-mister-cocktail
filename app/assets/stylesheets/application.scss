@@ -32,7 +32,6 @@ body {
 
 .ingredients i, li {
   color: #004392;
-
 }
 
 .ingredient-card {
@@ -42,4 +41,12 @@ body {
   background-color: white;
   border: 3px dotted white;
   padding: 20px 20px 20px 20px;
+}
+
+.container-form {
+  width: 400px;
+  border: 2px solid white;
+  display: flex;
+  align-item: center;
+  justify-content: center;
 }

@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <%= link_to cocktail_path(cocktail) do %>
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= display_background_image_path(cocktail.image, crop: :fill) %>);">
+        <div class="card-category"><%= ["MUST", "POPULAR", "SUMMER"].sample %>
+        </div>
+        <div class="card-description">
+          <h2><%= cocktail.name %></h2>
+          <p>Very cool cocktail, the best</p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <% end %>
+  </div>
+</div>
+
+<% #cl_image_path(cocktail.image, crop: :fill) unless cocktail.image.nil? %>

@@ -43,7 +43,7 @@ gem 'simple_form'
 
 # SECRET KEY FOR CLOUDINARY
 gem 'dotenv-rails', groups: [:development, :test]
-
+gem 'cloudinary'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 

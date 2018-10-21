@@ -13,13 +13,8 @@
 /* Logo */
 .navbar-wagon-brand img {
   height: 50px;
-}
-
-/* User Avatar */
-.navbar-wagon .avatar {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+  border-radius: 45%;
+  width: 50px;
 }
 
 /* Right section */
@@ -39,9 +34,20 @@
 .navbar-wagon-link {
   color: #616668;
   font-size: 14px;
+  display: inline-block;
 }
+
+.navbar-wagon-link li {
+  display: inline;
+   text-align: center;
+   padding: 2px ;
+   margin: 0;
+   width: 19%;
+   color: grey !important;
+   text-decoration: none;
+ }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: #da552f !important;
   text-decoration: none;
 }
 

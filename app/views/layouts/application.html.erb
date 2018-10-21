@@ -13,6 +13,7 @@
     <style>
     @import url('https://fonts.googleapis.com/css?family=Fascinate+Inline|Roboto');
     </style>
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <style>
 @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
@@ -20,8 +21,12 @@
   </head>
 
   <body>
-    <%= render 'partials/navbar' %>
+    <%= render 'partials/navbar', cocktail: @cocktail %>
     <%= yield %>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>
